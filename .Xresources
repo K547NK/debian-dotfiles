@@ -36,8 +36,8 @@
 *.color7:       #ebebeb
 *.color15:      #f8f8f8
 
-URxvt.font:Menlo for Powerline:size=10
 rxvt.geometry:38x9+0+0
 URxvt*scrollBar: false
 URxvt.resize-font.smaller: C-j
 URxvt.resize-font.bigger:  C-k
+URxvt.font:Menlo for Powerline:size=10  
