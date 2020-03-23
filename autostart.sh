@@ -1,8 +1,8 @@
 nitrogen --restore &
 compton &
 rxvt -e tty-clock &
-alsactl init &
-spotifyd &
+#alsactl init &
+#spotifyd &
 
 
 #(sleep 2 /usr/bin/pulseaudio --start --log-target=syslog) &
