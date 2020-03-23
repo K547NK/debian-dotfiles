@@ -97,10 +97,7 @@ export LANG=en_US.UTF-8
 # Example aliases
  alias zshconfig="nano ~/.zshrc"
  alias ohmyzsh="nano ~/.oh-my-zsh"
- alias spotify="./spt"  
- alias spotifyd="./spotifyd"
  alias clock="tty-clock"
- alias todo="python3 /home/nigel/stuff/hello-world/to_list.py"
  neofetch
  
 
