@@ -1,43 +1,40 @@
-!! Colorscheme
 ! special
-*.foreground:   #f8f8f8
-*.background:   #171717
-*.cursorColor:  #f8f8f8
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
 
 ! black
-*.color0:       #171717
-*.color8:       #38252c
+*.color0:       #303030
+*.color8:       #5f5f5f
 
 ! red
-*.color1:       #d81765
-*.color9:       #ff0000
+*.color1:       #c03000
+*.color9:       #ff3a78
 
 ! green
-*.color2:       #97d01a
-*.color10:      #76b639
+*.color2:       #b1d631
+*.color10:      #a6cd07
 
 ! yellow
-*.color3:       #ffa800
-*.color11:      #e1a126
+*.color3:       #fecf35
+*.color11:      #b5c865
 
 ! blue
-*.color4:       #16b1fb
-*.color12:      #289cd5
+*.color4:       #426870
+*.color12:      #4a7781
 
 ! magenta
-*.color5:       #ff2491
-*.color13:      #ff2491
+*.color5:       #6d506d
+*.color13:      #ff3b77
 
 ! cyan
-*.color6:       #0fdcb6
-*.color14:      #0a9b81
+*.color6:       #4bb5c1
+*.color14:      #4bb5c1
 
 ! white
-*.color7:       #ebebeb
-*.color15:      #f8f8f8
+*.color7:       #e2e2e5
+*.color15:      #e2e2e5
 
-rxvt.geometry:38x9+0+0
-URxvt*scrollBar: false
-URxvt.resize-font.smaller: C-j
-URxvt.resize-font.bigger:  C-k
-URxvt.font:Menlo for Powerline:size=10  
+UXTerm*faceName:Monospace
+UXTerm*faceSize:9
+
