@@ -38,3 +38,4 @@
 UXTerm*faceName:Monospace
 UXTerm*faceSize:9
 
+URXvt*scrollBar:false
