@@ -1,15 +1,15 @@
 #!/bin/bash
-apt install network-manger aptitude sudo gcc make dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev ranger tlp pavucontrols sddm compton python3-pip xorg i3lock feh telegram-desktop firefox rofi zsh curl -y
-sudo adduser nigel sudo
-apt install firwamre-linux-nonfree -y
+apt install aptitude sudo gcc make dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev ranger tlp sddm compton python3-pip xorg i3lock feh telegram-desktop firefox-esr rofi zsh curl -y
 
-curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo adduser nigel sudo
+
+curl -sS https://download.spotify.com/debian/pubkey.gpg | apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | tee /etc/apt/sources.list.d/spotify.list
 
 apt-get update && apt-get install spotify-client -y
 
 git clone https://github.com/resloved/i3.git
-cd i3-gaps
+cd i3
 
 # compile & install
 autoreconf --force --install
