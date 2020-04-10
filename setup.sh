@@ -1,6 +1,6 @@
 #!/bin/bash
-apt install aptitude sudo gcc make dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev ranger tlp sddm compton python3-pip xorg i3lock feh telegram-desktop firefox-esr rofi zsh curl -y
-
+apt install i3blocks aptitude font-manager sudo gcc make dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev ranger tlp sddm compton python3-pip xorg i3lock feh telegram-desktop firefox-esr rofi zsh curl -y
+pip3 install powerline-shell
 sudo adduser nigel sudo
 
 curl -sS https://download.spotify.com/debian/pubkey.gpg | apt-key add - 
