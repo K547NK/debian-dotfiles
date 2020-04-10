@@ -10,15 +10,6 @@ apt install htop vim neofetch imagemagick i3blocks aptitude ardour font-manager 
 #make a directory for our sddm user icon and set permissions for sddm
 mkdir -p /usr/share/sddm/faces && cp -r nigel.face.icon /usr/share/faces/
 
-#cause we all love zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-#of course we love to have but not use powerline
-pip3 install powerline-shell
-
-#copy essential dotfiles to home folder
-cp -r .vimrc /home/nigel/ && cp -r .Xresources /home/nigel/ && cp -r .zshrc /home/nigel/
-
 #cause we all love to be the occassional superuser
 sudo adduser nigel sudo
 
@@ -52,6 +43,15 @@ make
 make install
 
 cd ..
+#cause we all love zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+#of course we love to have but not use powerline
+pip3 install powerline-shell
+
+#copy essential dotfiles to home folder
+cp -r .vimrc /home/nigel/ && cp -r .Xresources /home/nigel/ && cp -r .zshrc /home/nigel/
+
 
 rm -rf i3
 
