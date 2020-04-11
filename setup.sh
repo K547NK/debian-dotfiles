@@ -55,5 +55,4 @@ cp -r .vimrc ~/ && cp -r .Xresources ~/ && cp -r .zshrc ~/
 #finally my music applications
 sudo apt install ./tdl.deb && sudo apt install ./waveform.deb
 #verify everything is properly installed
-echo "finishing touches..."
 sh ./installed.sh
