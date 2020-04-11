@@ -52,10 +52,6 @@ sudo pip3 install powerline-shell
 
 #copy essential dotfiles to home folder
 cp -r .vimrc ~/ && cp -r .Xresources ~/ && cp -r .zshrc ~/
-#finally my music applications
-sudo dpkg -i tdl.deb 
-sudo apt -f install
-sudo dpkg -i waveform.deb
-sudo apt -f install
+
 #verify everything is properly installed
 sh ./installed.sh
