@@ -1,5 +1,6 @@
 #!/bin/bash
 #create and a local user config folder and copy all settings to it
+#this adds a complete guide to Python Development and GNU Troff please comment out unnecessary lines
 cp -r Manuals /home/nigel/
 cp -r Pictures /home/nigel/
 mkdir ~/.config && cp -r .config/* ~/.config/
@@ -19,11 +20,6 @@ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 sudo echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt update && sudo apt install spotify-client -y
-
-#this adds a complete guide to Python Development and GNU Troff please comment out unnecessary lines
-cp -r Manuals ~/
-cp -r Pictures ~/
-mkdir ~/.config && cp -r .config/* ~/.config/
 
 #time for our favorite window manager
 git clone https://github.com/resloved/i3.git
