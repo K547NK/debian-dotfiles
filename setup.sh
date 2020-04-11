@@ -5,13 +5,10 @@ cp -r Pictures /home/nigel/
 mkdir /home/nigel/.config && cp -r .config/* /home/nigel/.config/
 
 #installing our fave programs and i3 gaps dependencies
-apt install xterm htop vim neofetch imagemagick i3blocks aptitude ardour font-manager sudo gcc make dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev ranger tlp sddm compton python3-pip xorg i3lock feh telegram-desktop firefox-esr rofi zsh curl -y
+apt install sudo xterm htop vim neofetch imagemagick i3blocks aptitude ardour font-manager  gcc make dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev ranger tlp sddm compton python3-pip xorg i3lock feh telegram-desktop firefox-esr rofi zsh curl -y
 
 #make a directory for our sddm user icon and set permissions for sddm
 mkdir -p /usr/share/sddm/faces && cp -r nigel.face.icon /usr/share/faces/
-
-#cause we all love to be the occassional superuser
-sudo adduser nigel sudo
 
 #remove those annoying preinstalled tiny text editors
 apt remove nano vim-tiny
@@ -52,5 +49,11 @@ pip3 install powerline-shell
 #copy essential dotfiles to home folder
 cp -r .vimrc /home/nigel/ && cp -r .Xresources /home/nigel/ && cp -r .zshrc /home/nigel/
 
-chmod -R 755 /home/nigel
+chmod -R 755 /home/nigel/.config
 
+#add sudo
+sudo adduser nigel sudo
+
+#verify everything is properly installed
+echo "finishing touches..."
+sh ./installed.sh
