@@ -6,7 +6,7 @@ cp -r Pictures /home/nigel/
 mkdir ~/.config && cp -r .config/* ~/.config/
 
 #installing our fave programs and i3 gaps dependencies
-sudo apt install xterm htop vim neofetch zathura scrot imagemagick i3blocks aptitude ardour font-manager  gcc make dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev ranger tlp sddm compton python3-pip xorg i3lock feh telegram-desktop firefox-esr ark rofi zsh curl -y
+sudo apt install xterm htop vim neofetch neomutt isync msmtp pass notmuch zathura scrot imagemagick i3blocks aptitude ardour font-manager  gcc make dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev ranger tlp sddm compton python3-pip xorg i3lock feh telegram-desktop firefox-esr ark rofi zsh curl -y
 
 #make a directory for our sddm user icon and set permissions for sddm replace you
 #comment out this line you dont need it unless you want my face on your computer
@@ -49,5 +49,6 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 #the customiztions is all left to you
 sudo pip3 install powerline-shell
 
-#verify everything is properly installed
-sh ./installed.sh
+git clone https://github.com/LukeSmithxyz/mutt-wizard
+cd mutt-wizard
+sudo make install
