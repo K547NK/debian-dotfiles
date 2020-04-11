@@ -43,7 +43,7 @@ sudo make install
 
 cd ..
 #cause we all love zsh tthis will install oh-my-zsh and remove the one it file it adds
-sh -c $(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 rm -rf ~/.zshrc
 
 #of course we love to have but not use powerline
