@@ -1,3 +1,5 @@
+
+#Gaps and no border
 for_window [class=".*"] border pixel 0
 gaps outer 25
 gaps inner 17
@@ -174,12 +176,28 @@ bar {
     status_command i3blocks
 
 }
+bindsym Mod1+Shift+k exec xrandr --output eDP-1 --brightness 0.3
+bindsym Mod1+Shift+o exec xrandr --output HDMI-1 --brightness 0.3
+
+bindsym Mod1+Shift+u exec xrandr --output eDP-1 --brightness 0.5
+bindsym Mod1+Shift+h exec xrandr --output HDMI-1 --brightness 0.5
+bindsym Mod1+r workspace 6; exec uxterm -e ranger 
+bindsym Mod1+Shift+m workspace 5;exec uxterm -e neomutt
 bindsym Mod1+t exec telegram-desktop
 bindsym Mod1+s exec spotify
-bindsym Mod1+Shift+f exec firefox
+bindsym Mod1+Shift+f exec firefox; workspace 2
 bindsym Mod1+Shift+l exec sh ~/.config/i3/lock.sh
+bindsym Mod1+w exec Waveform10
 exec feh --bg-scale ~/Pictures/wallpaper.jpg &
 exec compton &
-exec xrandr --output eDP-1 --brightness 0.5
-exec xrandr --output HDMI-1 --brightness 0.5
+exec xrandr --output eDP-1 --brightness 0.3
+exec xrandr --output HDMI-1 --brightness 0.3
 exec sh ~/.config/i3/screem.sh
+exec mbsync gmail.com
+
+#Specific Application-Workspace Assignment
+assign [class="Firefox-esr"] 2
+assign [class="Waveform10"] 3
+assign [class="Spotify"] 4
+assign [class="MuPDF"] 7
+
