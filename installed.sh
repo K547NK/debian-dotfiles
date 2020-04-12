@@ -18,3 +18,5 @@ echo "Packages" &&
 echo "rebooting now" &&
 cd &&
 rm -rf dotfiles
+
+sudo reboot
