@@ -1,9 +1,9 @@
 DOTFILES
 
 REQUIREMENTS
-*Must know how to RTFM
-*Must have an internet connection!
-*Must have root previleges.
+*Must know how to RTFM*
+*Must have an internet connection!*
+*Must have root previleges.*
 
 A custom install script for use with laptops.
 
