@@ -19,8 +19,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
-
+font pango:monospace 9 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -34,9 +33,6 @@ font pango:monospace 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-
-# start a terminal
-bindsym $mod+Return exec uxterm 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -100,14 +96,14 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
+set $ws1 "1: Terminals"
+set $ws2 "2: FireFox"
 set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
+set $ws4 "4: Spotify"
+set $ws5 "5: Chats"
+set $ws6 "6: Ranger" 
 set $ws7 "7"
-set $ws8 "8"
+set $ws8 "8: Mail"
 set $ws9 "9"
 set $ws10 "10"
 
@@ -134,6 +130,8 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+# start a terminal
+bindsym $mod+Return workspace $ws1; exec uxterm
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -173,21 +171,19 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     position top
-    status_command i3blocks
-
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
 
 }
 #Custom bindings for favorite apps and settings
-bindsym Mod1+Shift+k exec xrandr --output eDP-1 --brightness 0.3
-bindsym Mod1+Shift+o exec xrandr --output HDMI-1 --brightness 0.3
+
 
 bindsym Mod1+Shift+u exec xrandr --output eDP-1 --brightness 0.5
 bindsym Mod1+Shift+h exec xrandr --output HDMI-1 --brightness 0.5
-bindsym Mod1+r workspace 6; exec uxterm -e ranger 
-bindsym Mod1+Shift+m workspace 5;exec uxterm -e neomutt
+bindsym Mod1+r workspace $ws6; exec uxterm -e ranger 
+bindsym Mod1+Shift+m workspace $ws8;exec mbsync gmail ;exec uxterm -e neomutt
 bindsym Mod1+t exec telegram-desktop
-bindsym Mod1+s  workspace 4 ; exec spotify
-bindsym Mod1+Shift+f exec firefox; workspace 2
+bindsym Mod1+s workspace $ws4 ;exec spotify 
+bindsym Mod1+Shift+f workspace $ws2; exec firefox
 bindsym Mod1+Shift+l exec sh ~/.config/i3/lock.sh
 bindsym Mod1+w exec Waveform10  
 bindsym Mod1+Shift+w exec firefox-esr https://web.whatsapp.com/
@@ -196,11 +192,8 @@ exec compton &
 exec xrandr --output eDP-1 --brightness 0.3
 exec xrandr --output HDMI-1 --brightness 0.3
 exec sh ~/.config/i3/screem.sh
-exec mbsync gmail.com
+exec mbsync gmail.com &
 bindsym Print exec scrot ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && feh ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
 #Specific Application-Workspace Assignment
-assign [class="Firefox-esr"] 2
-assign [class="Waveform10"] 3
-assign [class="Spotify"] 4
 assign [class="MuPDF"] 7
-assign [class="TelegramDesktop"] 5
+assign [class="TelegramDesktop"] $ws5
