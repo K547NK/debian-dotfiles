@@ -98,7 +98,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Terminals"
 set $ws2 "2: FireFox"
-set $ws3 "3"
+set $ws3 "3: Pictures"
 set $ws4 "4: Spotify"
 set $ws5 "5: Chats"
 set $ws6 "6: Ranger" 
@@ -195,5 +195,6 @@ exec sh ~/.config/i3/screem.sh
 exec mbsync gmail.com &
 bindsym Print exec scrot ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && feh ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
 #Specific Application-Workspace Assignment
-assign [class="MuPDF"] 7
+assign [class="MuPDF"] $ws7
 assign [class="TelegramDesktop"] $ws5
+assign [class="feh"] $ws3
