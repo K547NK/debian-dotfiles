@@ -96,13 +96,13 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Terminals"
-set $ws2 "2: FireFox"
+set $ws1 "1: >_" 
+set $ws2 "2: www"
 set $ws3 "3: Pictures"
-set $ws4 "4: Spotify"
+set $ws4 "4: Music"
 set $ws5 "5: Chats"
-set $ws6 "6: Ranger" 
-set $ws7 "7"
+set $ws6 "6: Files" 
+set $ws7 "7: Audio"
 set $ws8 "8: Mail"
 set $ws9 "9"
 set $ws10 "10"
@@ -177,8 +177,8 @@ bar {
 #Custom bindings for favorite apps and settings
 
 
-bindsym Mod1+Shift+u exec xrandr --output eDP-1 --brightness 0.5
-bindsym Mod1+Shift+h exec xrandr --output HDMI-1 --brightness 0.5
+bindsym Mod1+Shift+u exec xrandr --output eDP-1 --brightness 0.8
+bindsym Mod1+Shift+h exec xrandr --output HDMI-1 --brightness 0.8
 bindsym Mod1+r workspace $ws6; exec uxterm -e ranger 
 bindsym Mod1+Shift+m workspace $ws8;exec mbsync gmail ;exec uxterm -e neomutt
 bindsym Mod1+t exec telegram-desktop
@@ -189,12 +189,13 @@ bindsym Mod1+w exec Waveform10
 bindsym Mod1+Shift+w exec firefox-esr https://web.whatsapp.com/
 exec feh --bg-scale ~/Pictures/wallpaper.jpg &
 exec compton &
-exec xrandr --output eDP-1 --brightness 0.3
-exec xrandr --output HDMI-1 --brightness 0.3
-exec sh ~/.config/i3/screem.sh
+exec xrandr --output eDP-1 --brightness 0.5
+exec xrandr --output HDMI-1 --brightness 0.5
+exec sh ~/.config/i3/orientation.sh
 exec mbsync gmail.com &
 bindsym Print exec scrot ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && feh ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
 #Specific Application-Workspace Assignment
 assign [class="MuPDF"] $ws7
 assign [class="TelegramDesktop"] $ws5
 assign [class="feh"] $ws3
+assign [class="Ardour"] $ws7
