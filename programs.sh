@@ -6,7 +6,7 @@ cp -r Pictures /home/nigel/
 mkdir ~/.config && cp -r .config/* ~/.config/
 
 #installing our fave programs
-sudo apt install xterm htop vim neofetch neomutt isync msmtp pass notmuch mupdf scrot imagemagick i3blocks aptitude font-manager ranger tlp sddm compton python3-pip xorg i3lock feh telegram-desktop firefox-esr ark rofi zsh curl -y
+sudo apt install tty- clock xterm htop vim neofetch neomutt isync msmtp pass notmuch mupdf scrot imagemagick i3blocks aptitude font-manager ranger tlp sddm compton python3-pip xorg i3lock feh telegram-desktop firefox-esr ark rofi zsh curl -y
 
 #make a directory for our sddm user icon and set permissions for sddm replace you
 #comment out this line you dont need it unless you want my face on your computer
