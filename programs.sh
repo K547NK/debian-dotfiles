@@ -10,7 +10,7 @@ sudo apt install tty-clock xterm htop vim neofetch neomutt isync msmtp pass notm
 
 #make a directory for our sddm user icon and set permissions for sddm replace you
 #comment out this line you dont need it unless you want my face on your computer
-sudo mkdir -p /usr/share/sddm/faces/ && sudo cp -r ~/dotfiles/nigel.face.icon /usr/share/faces/
+sudo mkdir -p /usr/share/sddm/faces/ && sudo cp -r ~/dotfiles/nigel.face.icon /usr/share/sddm/faces/
 
 #remove those annoying preinstalled tiny text editors which are powerfull yet incomplete
 sudo apt remove nano vim-tiny
