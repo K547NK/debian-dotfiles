@@ -1,4 +1,5 @@
 #!bin/bash
+#this is the final getsugatensho
 #set up email client
 gpg --full-gen-key &&
 pass init nigel.agwah@gmail.com &&
