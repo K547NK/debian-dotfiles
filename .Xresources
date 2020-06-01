@@ -36,6 +36,6 @@
 *.color15:      #e2e2e5
 
 UXTerm*faceName:Monospace
-UXTerm*faceSize:9
+UXTerm*faceSize:12
 
 URxvt*scrollBar:false
