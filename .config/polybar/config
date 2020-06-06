@@ -4,8 +4,8 @@ line-size = 4
 border-size = 10 
 modules-center = date
 modules-left = i3
-modules-right = wired-network
-
+modules-right = network   
+font-0 = "Noto Sans:size=11;1"
 
 [module/i3]
 type = internal/i3
@@ -15,9 +15,9 @@ enable-scroll = true
 wrapping-scrolling = true
 label-mode = %mode%
 
-[module/wired-network]
+[module/network]
 type = internal/network
-interface = eth0
+interface = wlp1s0
 interval = 3
 accumulate-stats = true
 format-connected = <ramp-signal> <label-connected>
@@ -36,6 +36,7 @@ animation-packetloss-1 = 📶
 animation-packetloss-1-foreground = #000000
 ; Framerate in milliseconds
 animation-packetloss-framerate = 500
+label-connected = %essid% 
 
 [module/date]
 type = internal/date
@@ -45,6 +46,10 @@ time = %H:%M
 label = %date%, %time%
 label-padding-left = 4
 
-[settings]
-screenchange-reload = true
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = true
+interval = 5
+
 
