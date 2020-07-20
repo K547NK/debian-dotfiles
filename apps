@@ -1,4 +1,4 @@
-#bin/bash
+#!/bin/bash
 #create and a local user config folder and copy all settings to it
 #this adds a complete guide to Python Development and GNU Troff please comment out unnecessary lines
 cp -r Manuals /home/nigel/
