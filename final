@@ -18,6 +18,6 @@ echo "Packages" &&
 #say bye bye
 echo "rebooting now" &&
 cd &&
-rm -rf debian
+rm -rf ~/debian
 
 sudo reboot
