@@ -21,4 +21,4 @@ cd ~/Documents/ && git clone https://github.com./K547NK/PythonScripts
 sudo apt remove nano vim-tiny
 
 #cause we all love bling this will install oh-my-bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmybash/ohmybash/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
