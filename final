@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 #this is the final getsugatensho
 #set up email client
 gpg --full-gen-key &&
@@ -18,6 +18,7 @@ echo "Packages" &&
 #say bye bye
 echo "rebooting now" &&
 cd &&
-rm -rf ~/debian
-
+#cause we all love bling this will install oh-my-bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" &&
+rm -rf ~/debian &&
 sudo reboot
