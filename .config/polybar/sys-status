@@ -1,0 +1,81 @@
+[bar/right]
+monitor = HDMI-2
+monitor-strict = true
+monitor-exact = true
+override-redirect = true
+bottom = false
+width = 340
+height = 35
+offset-x = 1570
+offest-y = -1045
+background = #000000
+radius = 10.0
+line-size = 
+line-color =#f00
+padding-left = 4
+padding-right = 3 
+module-margin = 1
+font-0 = NotoSans-Regular:size=8;2
+font-1 = FontAwesome5Free:style=Solid:pixelsize=10:antialias=false;3
+font-2 = FontAwesome5Brands:style=Solid:pixelsize=10:antialias=false;3
+modules-right = cpu pulseaudio memory network date 
+spacing = 0
+dim-value = 1.0
+tray-position = right 
+tray-maxsize = 55
+
+[module/date]
+type = internal/date
+interval = 1
+date = %m-%d-%Y
+time = %I:%M
+format =  <label>
+label = %date% %time%
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label>
+label =  %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 0.5
+format = <label> 
+label =   %percentage_used%
+
+[module/network]
+type = internal/network
+interface = wlp3s0
+interval = 5
+accumulate-stats = true
+unknown-as-up = true
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected =  %signal% 
+label-disconnected =
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_001b.0.analog-stereo
+use-ui-max = true
+interval = 5
+format-volume = <ramp-volume> <label-volume>
+format-muted = <label-muted>
+label-muted =  Mute
+ramp-volume-0 =
+ramp-volume-1 =
+ramp-volume-2 =
+click-right = pavucontrol &
+
+[module/updates-apt]
+type = custom/script
+label = 
+exec = ~/Documents/polybar/scripts/updates-apt.sh
+interval = 600
+
+[module/system-bluetooth-bluetoothctl]
+type = custom/script
+exec = ~/Documents/polybar/scripts/system-bluetooth-bluetoothctl.sh
+tail = true
+click-left = ~/Documents/polybar/scripts/system-bluetooth-bluetoothctl.sh --toggle &
