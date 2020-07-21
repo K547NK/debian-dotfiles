@@ -1,7 +1,9 @@
 #!/bin/bash
-
 killall -q polybar
-
-# Run the bars
-
-polybar main -c ~/.config/polybar/sys-status
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar --reload main &
+  done
+else
+  polybar --reload main &
+fi
