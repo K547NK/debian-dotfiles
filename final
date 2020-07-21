@@ -8,7 +8,7 @@ mw add &&
 #set up github
 echo "adding github account"&&
 git config --global user.email "nigel.agwah@gmail.com" &&
-git config--global user.name "K547NK" &&
+git config --global user.name "K547NK" &&
 
 #echo installed packages
 echo "You have installed" &&
