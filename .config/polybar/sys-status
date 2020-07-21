@@ -1,34 +1,55 @@
-[bar/right]
-monitor = HDMI-2
-monitor-strict = true
-monitor-exact = true
+[bar/main]
 override-redirect = true
 bottom = false
-width = 340
+width = 1226
 height = 35
-offset-x = 1570
+offset-x = 70
 offest-y = -1045
 background = #000000
-radius = 10.0
-line-size = 
-line-color =#f00
 padding-left = 4
 padding-right = 3 
-module-margin = 1
+module-margin = 2
 font-0 = NotoSans-Regular:size=8;2
 font-1 = FontAwesome5Free:style=Solid:pixelsize=10:antialias=false;3
 font-2 = FontAwesome5Brands:style=Solid:pixelsize=10:antialias=false;3
-modules-right = cpu pulseaudio memory network date 
+modules-center = i3
+modules-right = cpu pulseaudio memory network  
+modules-left = date
 spacing = 0
-dim-value = 1.0
-tray-position = right 
-tray-maxsize = 55
+
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+wrapping-scroll = true
+index-sort = true
+format = <label-state> <label-mode>
+label-mode = %mode%
+label-mode-padding = 5
+label-visible = %name%
+label-visible-underline = #555555
+label-visible-padding = 4
+label-urgent = %name%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 4
+label-separator = |
+label-separator-padding = 2
+label-separator-foreground = #000000
+label-focused = %name%
+label-focused-foreground = #ffffff
+label-focused-background = #000000
+label-focused-underline = #fba922
+label-focused-padding = 4
+label-unfocused = %name%
+label-unfocused-padding = 4
+
 
 [module/date]
 type = internal/date
 interval = 1
-date = %m-%d-%Y
-time = %I:%M
+date = %m/%d
+time = %H:%M
 format =  <label>
 label = %date% %time%
 

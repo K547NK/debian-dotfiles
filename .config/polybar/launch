@@ -1,2 +1,7 @@
+#!/bin/bash
+
 killall -q polybar
-polybar right -c ~/Documents/polybar/sys-status
+
+# Run the bars
+
+polybar main -c ~/.config/polybar/sys-status
