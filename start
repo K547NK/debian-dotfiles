@@ -1,7 +1,7 @@
 #!/bin/bash
 #fix our sources
 sudo rm -rf /etc/apt/sources.list &&
-sudo mv ~/debian/sources.list /etc/apt/
+sudo mv ~/debian/Manuals/sources.list /etc/apt/
 
 
 #installing i3 gaps dependencies
