@@ -18,6 +18,6 @@ sudo mkdir -p /usr/share/sddm/faces/ && sudo cp -r ~/debian/nigel.face.icon /usr
 cd ~/Documents/ && git clone https://github.com./K547NK/PythonScripts
 
 #remove those annoying preinstalled tiny text editors which are powerfull yet incomplete
-sudo apt remove nano vim-tiny
+sudo apt remove nano vim-tiny -y
 
 
