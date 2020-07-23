@@ -3,7 +3,6 @@ monitor = ${env:MONITOR}
 override-redirect = true
 bottom = false
 height = 35
-background = #000000
 padding-left = 4
 padding-right = 3 
 module-margin = 2
@@ -14,6 +13,12 @@ modules-center = i3
 modules-right = cpu pulseaudio memory network  
 modules-left = date
 spacing = 0
+offset-y = 5
+border-left = 25
+border-right = 25
+radius =10.0
+border-bottom-size = 20
+
 
 [module/i3]
 type = internal/i3
