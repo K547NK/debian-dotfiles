@@ -179,7 +179,7 @@ bar {
 bindsym Mod1+Shift+u exec xrandr --output eDP-1 --brightness 0.8
 bindsym Mod1+Shift+h exec xrandr --output HDMI-1 --brightness 0.8
 bindsym Mod1+r workspace $ws6; exec uxterm -e ranger 
-bindsym Mod1+Shift+m workspace $ws8;exec mbsync gmail ;exec uxterm -e neomutt
+bindsym Mod1+Shift+m workspace $ws8;exec mbsync google ;exec uxterm -e neomutt
 bindsym Mod1+t exec telegram-desktop
 bindsym Mod1+s workspace $ws4 ;exec spotify 
 bindsym Mod1+Shift+f workspace $ws2; exec firefox
@@ -192,7 +192,7 @@ exec --no-startup-id sh ~/.config/polybar/launch &
 exec xrandr --output eDP-1 --brightness 0.5
 exec xrandr --output HDMI-1 --brightness 0.5
 exec sh ~/.config/i3/orientation.sh
-exec mbsync gmail.com &
+exec mbsync google
 bindsym Print exec scrot ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && feh ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
 #Specific Application-Workspace Assignment
 assign [class="MuPDF"] $ws7
