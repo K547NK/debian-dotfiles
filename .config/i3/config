@@ -2,7 +2,7 @@
 #Gaps and no border
 for_window [class=".*"] border pixel 0
 gaps outer 25
-gaps top 15
+gaps top 85
 gaps inner 17
 border_radius 4
 
