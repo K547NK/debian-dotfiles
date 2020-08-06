@@ -16,11 +16,11 @@ background = #aa2F343F
 
 [bar/right]
 inherit = bar/main
-width = 300
+width = 400
 bottom = false 
 modules-center = alsa network date battery
 enable-ipc = true
-offset-x = 1600
+offset-x = 1500
 
 [bar/center]
 inherit = bar/main
