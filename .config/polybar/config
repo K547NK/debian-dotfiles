@@ -39,29 +39,14 @@ type = internal/mpd
 host = 127.0.0.1
 port = 6600
 interval = 2
-format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+format-online = <icon-prev> <icon-stop> <icon-play> <icon-next> <label-time> <label-song>
 label-song = %artist% - %title%
 label-offline = 🎜 mpd is offline
 icon-play = 
 icon-pause = 
 icon-stop = 
-icon-prev = ⏮
-icon-next = ⏭
-icon-seekb = ⏪
-icon-seekf = ⏩
-icon-random = 🔀
-icon-repeat = 🔁
-icon-repeatone = 🔂
-icon-single = 🔂
-icon-consume = ✀
-
-; Only applies if <bar-progress> is used
-bar-progress-width = 45
-bar-progress-indicator = |
-bar-progress-fill = ─
-bar-progress-empty = ─
-
-
+icon-prev = 
+icon-next = 
 
 [module/battery]
 type = internal/battery
