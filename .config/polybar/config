@@ -70,7 +70,7 @@ animation-discharging-2 = 
 animation-discharging-3 = 
 animation-discharging-4 = 
 animation-discharging-framerate = 500000
-animation-charging-framerate = 5000
+animation-charging-framerate = 500
 
 [module/title]
 type = internal/xwindow
