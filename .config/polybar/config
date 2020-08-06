@@ -8,30 +8,60 @@ module-margin = 5
 border-left-size = 20
 border-top-size = 20
 radius = 22.8
-dpi = 110
+dpi = 112
 font-0 = NotoSans-Regular:size=8;2
 font-1 = FontAwesome5Free:style=Solid:pixelsize=10:antialias=false;3
 font-2 = FontAwesome5Brands:style=Solid:pixelsize=10:antialias=false;3
+background = #aa2F343F
 
 [bar/right]
 inherit = bar/main
 width = 300
 bottom = false 
-modules-center = pulseaudio network date
+modules-center = alsa network date
 enable-ipc = true
 offset-x = 1600
 
-[bar/left]
-inherit = bar/main
-width = 200
-modules-center = i3
-
 [bar/center]
 inherit = bar/main
+width = 300
+modules-center = mpd
+offset-x = 800
+
+[bar/left]
+inherit = bar/main
 bottom = false
-modules-center = title 
+modules-center = title i3 
 width = 400
-offset-x = 760
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+interval = 2
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+label-song = %artist% - %title%
+label-offline = 🎜 mpd is offline
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-single = 🔂
+icon-consume = ✀
+
+; Only applies if <bar-progress> is used
+bar-progress-width = 45
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+
+
 
 [module/battery]
 type = internal/battery
@@ -111,17 +141,24 @@ format-disconnected = <label-disconnected>
 label-connected =  %signal% 
 label-disconnected =
 
-[module/pulseaudio]
-type = internal/pulseaudio
-use-ui-max = true
-interval = 5
+[module/alsa]
+type = internal/alsa
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+master-mixer = Master
+speaker-mixer = Speaker
+headphone-mixer = Headphone
+mapped = true
 format-volume = <ramp-volume> <label-volume>
-format-muted = <label-muted>
-label-muted =  Mute
-ramp-volume-0 =
-ramp-volume-1 =
-ramp-volume-2 =
-click-right = pavucontrol &
+label-muted = 🔇 muted
+label-muted-foreground = #66
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
 
 [module/updates-apt]
 type = custom/script
