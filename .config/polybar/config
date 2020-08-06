@@ -55,15 +55,10 @@ battery = BAT0
 adapter = ADP1
 poll-interval = 5
 format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <animation-discharging> <label-discharging>
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = Full
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
@@ -75,7 +70,6 @@ animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-3 = 
 animation-discharging-4 = 
-; Framerate in milliseconds
 animation-discharging-framerate = 500
 
 [module/title]
