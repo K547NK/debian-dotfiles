@@ -3,37 +3,40 @@ override-redirect = true
 bottom = false
 height = 45
 padding-left-size = 9
-padding-right-size = 9
-module-margin = 5
-border-left-size = 20
-border-top-size = 20
+padding-right-size = 12
+module-margin = 4 
+border-left-size = 12
+border-top-size = 12
 radius = 22.8
 dpi = 112
-font-0 = NotoSans-Regular:size=8;2
-font-1 = FontAwesome5Free:style=Solid:pixelsize=10:antialias=false;3
-font-2 = FontAwesome5Brands:style=Solid:pixelsize=10:antialias=false;3
-background = #aa2F343F
-
-[bar/right]
-inherit = bar/main
-width = 400
-bottom = false 
-modules-center = alsa network date battery
-enable-ipc = true
-offset-x = 1500
+font-0 = OpenSans-Bold:size=9:antialias=true;2
+font-1 = FontAwesome5Free:style=Solid:pixelsize=12:antialias=true;4
+font-2 = FontAwesome5Brands:style=Solid:pixelsize=12:antialias=true;4
 
 [bar/center]
 inherit = bar/main
+width = 400
+bottom = false 
+modules-center = spotify
+enable-ipc = true
+offset-x = 1200
+
+
+[bar/right]
+inherit = bar/main
 width = 300
-modules-center = mpd
-offset-x = 800
+bottom = false 
+modules-center =  date alsa network battery
+enable-ipc = true
+offset-x = 1600
+
 
 [bar/left]
 inherit = bar/main
 bottom = false
-modules-center = title i3 
-width = 400
-
+modules-center = i3 
+width = 200
+background = #00
 [module/mpd]
 type = internal/mpd
 host = 127.0.0.1
@@ -82,20 +85,20 @@ label-empty = Nigel Agwah
 type = internal/i3
 pin-workspaces = true
 wrapping-scroll = true
-index-sort = true
+index-sort = false
 format = <label-state> <label-mode>
 label-mode = %mode%
-label-separator = ||
+label-separator = |
 label-separator-padding = 2
-label-separator-foreground = #000000
-
+label-separator-foreground = #00
+label-separator-background= #00
 [module/date]
 type = internal/date
 interval = 1
 date = %m/%d
 time = %H:%M
-format =  <label>
-label = %date% %time%
+format =  <label>
+label = %time%
 
 [module/cpu]
 type = internal/cpu
@@ -117,26 +120,27 @@ accumulate-stats = true
 unknown-as-up = true
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected =  %signal% 
+label-connected =   
 label-disconnected =
 
 [module/alsa]
 type = internal/alsa
 master-soundcard = default
 speaker-soundcard = default
-headphone-soundcard = default
+;headphone-soundcard = default
 master-mixer = Master
 speaker-mixer = Speaker
-headphone-mixer = Headphone
+;headphone-mixer = Headphone
 mapped = true
-format-volume = <ramp-volume> <label-volume>
-label-muted =  muted
+format-volume = <ramp-volume> 
+;<label-volume>
+label-muted =  
 label-muted-foreground = #66
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-ramp-headphones-0 = 
-ramp-headphones-1 = 
+;ramp-headphones-0 = 
+;ramp-headphones-1 = 
 
 
 [module/updates-apt]
@@ -145,8 +149,21 @@ label = 
 exec = ~/Documents/polybar/scripts/updates-apt.sh
 interval = 600
 
+[module/notification-reddit]
+type = custom/script
+exec = ~/.config/polybar-scripts/notification-reddit.sh
+interval = 60
+
 [module/system-bluetooth-bluetoothctl]
 type = custom/script
 exec = ~/Documents/polybar/scripts/system-bluetooth-bluetoothctl.sh
 tail = true
 click-left = ~/Documents/polybar/scripts/system-bluetooth-bluetoothctl.sh --toggle &
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python ~/.config/polybar/scripts/spotify_status.py -f '{artist} - {song}'
+format-underline = #e00000
