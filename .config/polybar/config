@@ -37,6 +37,7 @@ bottom = false
 modules-center = i3 
 width = 200
 background = #00
+
 [module/mpd]
 type = internal/mpd
 host = 127.0.0.1
@@ -92,12 +93,13 @@ label-separator = |
 label-separator-padding = 2
 label-separator-foreground = #00
 label-separator-background= #00
+
 [module/date]
 type = internal/date
 interval = 1
 date = %m/%d
 time = %H:%M
-format =  <label>
+format =   <label>
 label = %time%
 
 [module/cpu]
