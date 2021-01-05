@@ -19,8 +19,8 @@ width = 400
 bottom = false 
 modules-center = spotify
 enable-ipc = true
-offset-x = 1200
-
+offset-x = 750
+background = #00
 
 [bar/right]
 inherit = bar/main
@@ -28,8 +28,8 @@ width = 300
 bottom = false 
 modules-center =  date alsa network battery
 enable-ipc = true
-offset-x = 1600
-
+offset-x = 1550
+background = #00
 
 [bar/left]
 inherit = bar/main
@@ -58,8 +58,8 @@ full-at = 99
 battery = BAT0
 adapter = ADP1
 poll-interval = 1
-format-charging = <animation-charging> <label-charging>
-format-discharging = <animation-discharging> <label-discharging>
+format-charging = <animation-charging>  <label-charging>
+format-discharging = <animation-discharging>  <label-discharging>
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = Full
@@ -99,7 +99,7 @@ type = internal/date
 interval = 1
 date = %m/%d
 time = %H:%M
-format =   <label>
+format =    <label>
 label = %time%
 
 [module/cpu]
