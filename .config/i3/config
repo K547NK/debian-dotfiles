@@ -2,9 +2,9 @@
 #Gaps and no border
 for_window [class=".*"] border pixel 0
 gaps outer 25
-gaps top 85
-gaps inner 17
-border_radius 4
+gaps top 70
+gaps inner 20 
+border_radius 5
 
 set $mod Mod4
 
@@ -106,7 +106,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 # start a terminal
-bindsym $mod+Return workspace $ws1; exec uxterm
+bindsym $mod+Return workspace $ws1; exec xterm
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -155,8 +155,8 @@ bindsym Mod1+s workspace $ws4 ;exec spotify
 bindsym Mod1+Shift+f workspace $ws2; exec firefox 
 bindsym Mod1+Shift+l exec sh ~/.config/i3/lock.sh 
 bindsym Print exec scrot ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && feh ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
-exec feh --bg-scale ~/Pictures/wallpaper.jpg &
-exec --no-startup-id compton &
+exec feh --bg-scale ~/Pictures/wallpaper.png &
+exec --no-startup-id picom &
 exec --no-startup-id sh ~/.config/polybar/launch &
 exec --no-startup-id sh ~/.config/i3/orientation.sh &
 exec --no-startup-id mbsync google &
