@@ -1,9 +1,9 @@
 
 #Gaps and no border
 for_window [class=".*"] border pixel 0
-gaps outer 25
+gaps outer 45
 gaps top 70
-gaps inner 20 
+gaps inner 25
 border_radius 5
 
 set $mod Mod4
@@ -145,7 +145,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    i3bar_command polybar
+    i3bar_command polybar &
 }
 #Custom bindings for favorite apps and settings
 bindsym Mod1+r workspace $ws6; exec uxterm -e ranger 
@@ -153,9 +153,12 @@ bindsym Mod1+Shift+m workspace $ws8;exec mbsync google ;exec uxterm -e neomutt
 bindsym Mod1+t exec telegram-desktop 
 bindsym Mod1+s workspace $ws4 ;exec spotify  
 bindsym Mod1+Shift+f workspace $ws2; exec firefox 
+bindsym Mod1+l exec lofi &
+bindsym Mod+o exec killall lofi & 
 bindsym Mod1+Shift+l exec sh ~/.config/i3/lock.sh 
 bindsym Print exec scrot ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && feh ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
-exec feh --bg-scale ~/Pictures/wallpaper.png &
+#exec --no-startup-id bash -c 'i3lock -i ~/Pictures/login.png'
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png &
 exec --no-startup-id picom &
 exec --no-startup-id sh ~/.config/polybar/launch &
 exec --no-startup-id sh ~/.config/i3/orientation.sh &
