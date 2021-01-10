@@ -1,10 +1,11 @@
 [bar/main]
 override-redirect = true
+wm-restack = i3
 bottom = false
-height = 45
-padding-left-size = 9
+height = 40
+padding-left-size = 12 
 padding-right-size = 12
-module-margin = 4 
+module-margin = 3 
 border-left-size = 12
 border-top-size = 12
 radius = 22.8
@@ -24,33 +25,19 @@ background = #00
 
 [bar/right]
 inherit = bar/main
-width = 300
+width = 350
 bottom = false 
-modules-center =  date alsa network battery
+modules-center =  alsa network battery date
 enable-ipc = true
-offset-x = 1550
-background = #00
+offset-x = 1500
+background = #f60e95
 
 [bar/left]
 inherit = bar/main
 bottom = false
 modules-center = i3 
-width = 200
+width = 500
 background = #00
-
-[module/mpd]
-type = internal/mpd
-host = 127.0.0.1
-port = 6600
-interval = 2
-format-online = <icon-prev> <icon-stop> <icon-play> <icon-next> <label-time> <label-song>
-label-song = %artist% - %title%
-label-offline = 🎜 mpd is offline
-icon-play = 
-icon-pause = 
-icon-stop = 
-icon-prev = 
-icon-next = 
 
 [module/battery]
 type = internal/battery
@@ -76,17 +63,11 @@ animation-discharging-4 = 
 animation-discharging-framerate = 500000
 animation-charging-framerate = 500
 
-[module/title]
-type = internal/xwindow
-label  = %title%
-label-maxlen = 50
-label-empty = Nigel Agwah
-
 [module/i3]
 type = internal/i3
 pin-workspaces = true
-wrapping-scroll = true
-index-sort = false
+wrapping-scroll = false
+index-sort = true
 format = <label-state> <label-mode>
 label-mode = %mode%
 label-separator = |
