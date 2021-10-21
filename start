@@ -1,10 +1,14 @@
-#!/bin/bash
+#!/bin/sh
 #fix our sources
 sudo rm -rf /etc/apt/sources.list &&
 sudo mv ~/debian/Manuals/sources.list /etc/apt/
+#Setup our home environment
+mkdir Documents Pictures Code .config .homepage Downloads
 #Collecting dependencies for i3-gaps alongside non-free firmware
-sudo apt update && sudo aptitude install curl firmware-linux-nonfree firmware-linux-free gcc make dh-autoreconf make libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev -y &&
-#Collecting the 
+sudo apt update && sudo aptitude install curl firmware-linux-nonfree firmware-linux-free gcc make dh-autoreconf make libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xr-d libxcb-shape0 libxcb-shape0-dev pulseaudio pavucontrol acpi screenkey zathura tty-clock xterm htop vim neofetch neomutt isync msmtp pass notmuch mupdf scrot imagemagick polybar font-manager ranger tlp sddm compton python3-pip xorg i3lock feh telegram-desktop firefox-esr ark rofi -y &&
+sudo apt remove nano vim-tiny
+#Clone the repo and start building
+cd /tmp
 git clone https://github.com/resloved/i3.git
 cd i3
 # compile & install
