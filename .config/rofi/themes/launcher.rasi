@@ -43,7 +43,7 @@ configuration {
 #listview {
     fixed-height:   false;
     dynamic:    true;
-    lines: 5;
+    lines: 2;
     spacing: 0px;
     padding: 0px -10px;
 }
