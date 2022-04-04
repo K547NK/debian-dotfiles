@@ -17,9 +17,9 @@ configuration {
 
 
 * {
-    background: #111116;
-    font: "Monospace 11";
-    text-color: #ffffff;
+    background: #303030;
+    font: "Iosevka 11";
+    text-color: #ff8781;
     background-color: @background;
 }
 
@@ -36,14 +36,14 @@ configuration {
 }
 
 #textbox {
-    text-color:   #ffffff;
+    text-color:   #5e5e5e;
     background-color: @background;
 }
 
 #listview {
     fixed-height:   false;
     dynamic:    true;
-    lines: 10;
+    lines: 5;
     spacing: 0px;
     padding: 0px -10px;
 }
@@ -54,7 +54,7 @@ configuration {
 }
 
 #element selected {
-    text-color: #506C9F;
+    text-color: #9a413d;
 }
 
 #inputbar {
@@ -64,5 +64,5 @@ configuration {
 
 #entry {
     padding:    1px 0px;
-    font: "Monospace 14";
+    font: "Iosevka 14";
 }
